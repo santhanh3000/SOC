@@ -27,16 +27,19 @@ export const BRAND = {
   themeColor: '#0B1220',
 } as const
 
-export const CONTACT_EMAIL = 'hello@owlsoc.com'
-export const SECURITY_EMAIL = 'security@owlsoc.com'
-export const PRIVACY_EMAIL = 'privacy@owlsoc.com'
-export const LEGAL_EMAIL = 'legal@owlsoc.com'
+// All general enquiries (the pilot/enquiry form and the "email us" CTAs) go here.
+export const CONTACT_EMAIL = 'info@owlsoc.com'
+export const SECURITY_EMAIL = 'info@owlsoc.com'
+export const PRIVACY_EMAIL = 'info@owlsoc.com'
+export const LEGAL_EMAIL = 'info@owlsoc.com'
 
-// Lead-capture form. This is a static site (next export), so the form POSTs
-// directly to a managed form provider — no backend of our own.
-// TODO(launch): swap YOUR_FORM_ID for the real Formspree form id (or change
-// provider). The origin below must stay in sync with the CSP connect-src /
-// form-action allow-list in vercel.json and public/_headers.
+// Lead-capture form. This is a static site (next export), so there is no backend
+// of our own. Until a managed form provider is wired up, the enquiry form
+// delivers straight to CONTACT_EMAIL via the visitor's mail client (mailto).
+// TODO(launch, optional): for automatic capture, create a Formspree form that
+// forwards to info@owlsoc.com and swap YOUR_FORM_ID for its id — the form then
+// POSTs there instead of opening a mail draft. If you do, keep this origin in
+// sync with the CSP connect-src / form-action allow-list in vercel.json.
 export const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
 export const FORM_ORIGIN = 'https://formspree.io'
 export const FORM_CONFIGURED = !FORM_ENDPOINT.includes('YOUR_FORM_ID')

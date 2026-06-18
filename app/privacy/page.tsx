@@ -76,7 +76,7 @@ export default function Privacy() {
 
       <LegalH2>Contact</LegalH2>
       <p>
-        Privacy questions: <a href="mailto:privacy@owlsoc.com" className="text-amber-iris link-underline">privacy@owlsoc.com</a>.
+        Privacy questions: <a href="mailto:info@owlsoc.com" className="text-amber-iris link-underline">info@owlsoc.com</a>.
         Postal: OwlSOC Ltd, United Kingdom.
       </p>
     </LegalLayout>

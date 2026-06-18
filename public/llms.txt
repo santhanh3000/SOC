@@ -50,6 +50,5 @@
 
 ## Contact
 
-- General: hello@owlsoc.com
-- Security disclosures: security@owlsoc.com (see /.well-known/security.txt)
-- Privacy / DPA requests: privacy@owlsoc.com
+- General enquiries, security disclosures, and privacy / DPA requests: info@owlsoc.com
+  (security contact also at /.well-known/security.txt)

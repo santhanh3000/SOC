@@ -49,6 +49,7 @@ export function PilotForm() {
   const [fields, setFields] = useState<Fields>(EMPTY)
   const [errors, setErrors] = useState<Partial<Record<keyof Fields, string>>>({})
   const [status, setStatus] = useState<Status>('idle')
+  const [via, setVia] = useState<'form' | 'email'>('form')
   const honeypot = useRef<HTMLInputElement>(null)
 
   function set<K extends keyof Fields>(key: K, value: string) {
@@ -106,15 +107,24 @@ export function PilotForm() {
     }
 
     if (!FORM_CONFIGURED) {
-      // The form endpoint is still a placeholder. Fail loudly in dev, and show
-      // the buyer the email fallback rather than a silent dead submit.
-      if (process.env.NODE_ENV !== 'production') {
-        // eslint-disable-next-line no-console
-        console.warn(
-          '[OwlSOC] PilotForm: FORM_ENDPOINT is still a placeholder. Set it in lib/site.ts before launch.'
-        )
-      }
-      setStatus('error')
+      // No managed form backend wired up — deliver the enquiry straight to
+      // CONTACT_EMAIL via the visitor's mail client. Works on a static site
+      // with no backend and guarantees the enquiry reaches info@owlsoc.com.
+      const subject = `OwlSOC pilot enquiry — ${fields.company || fields.name}`
+      const body = [
+        `Name: ${fields.name}`,
+        `Work email: ${fields.email}`,
+        `Company: ${fields.company}`,
+        `Primary stack: ${fields.stack}`,
+        `Alerts per day: ${fields.volume || 'not specified'}`,
+        '',
+        fields.message ? `Message:\n${fields.message}` : '(no message)',
+      ].join('\n')
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`
+      setVia('email')
+      setStatus('success')
       return
     }
 
@@ -171,12 +181,27 @@ export function PilotForm() {
             <path d="M8 12l3 3 5-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
-        <h3 className="font-display text-bone text-[28px] leading-tight">You&apos;re in.</h3>
-        <p className="mt-3 text-bone-soft text-[15px] leading-relaxed max-w-[46ch] mx-auto text-pretty">
-          We&apos;ll email {fields.name.split(' ')[0] || 'you'} at{' '}
-          <span className="text-amber-iris">{fields.email}</span> within one business day to
-          scope your pilot and lock a kickoff Monday.
-        </p>
+        <h3 className="font-display text-bone text-[28px] leading-tight">
+          {via === 'email' ? 'One last tap.' : 'You’re in.'}
+        </h3>
+        {via === 'email' ? (
+          <p className="mt-3 text-bone-soft text-[15px] leading-relaxed max-w-[46ch] mx-auto text-pretty">
+            We&apos;ve opened an email to{' '}
+            <span className="text-amber-iris">{CONTACT_EMAIL}</span> with your details — just hit
+            send and we&apos;ll reply within one business day to scope your pilot. If nothing opened,
+            email us at{' '}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-amber-iris link-underline">
+              {CONTACT_EMAIL}
+            </a>
+            .
+          </p>
+        ) : (
+          <p className="mt-3 text-bone-soft text-[15px] leading-relaxed max-w-[46ch] mx-auto text-pretty">
+            We&apos;ll email {fields.name.split(' ')[0] || 'you'} at{' '}
+            <span className="text-amber-iris">{fields.email}</span> within one business day to
+            scope your pilot and lock a kickoff Monday.
+          </p>
+        )}
         {BOOKING_CONFIGURED && (
           <a
             href={BOOKING_URL}

@@ -64,7 +64,7 @@ export default function Terms() {
 
       <LegalH2>Contact</LegalH2>
       <p>
-        Questions about these terms: <a href="mailto:legal@owlsoc.com" className="text-amber-iris link-underline">legal@owlsoc.com</a>.
+        Questions about these terms: <a href="mailto:info@owlsoc.com" className="text-amber-iris link-underline">info@owlsoc.com</a>.
       </p>
     </LegalLayout>
   )
