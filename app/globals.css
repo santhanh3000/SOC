@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(244, 162, 97, 0.06), transparent 60%),
+      radial-gradient(1000px 700px at 0% 40%, rgba(46, 165, 159, 0.05), transparent 60%),
+      #070910;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #070910;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E2532;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2A3140;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #F4A261;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-delay: 0s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .animate-tick,
+    .animate-pulse-eye,
+    .animate-scan-line,
+    .animate-drift,
+    .animate-ping {
+      animation: none !important;
+      transform: none !important;
+    }
+  }
+}
+
+@layer components {
+  .h-display {
+    @apply font-display tracking-tightest leading-[0.95];
+  }
+  .h-eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-widest-sm text-bone-muted;
+  }
+  .h-rule {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-ink-border to-transparent;
+  }
+  .container-x {
+    @apply mx-auto max-w-[1200px] px-6 sm:px-8 lg:px-10;
+  }
+  .container-narrow {
+    @apply mx-auto max-w-[960px] px-6 sm:px-8;
+  }
+  .glass {
+    background: linear-gradient(180deg, rgba(22, 27, 38, 0.7), rgba(17, 21, 30, 0.7));
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+  }
+  .panel {
+    @apply bg-ink-surface/80 border border-ink-border rounded-xl;
+  }
+  .panel-elevated {
+    @apply bg-ink-elevated border border-ink-border rounded-xl;
+  }
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.4s ease;
+  }
+  .link-underline:hover {
+    background-size: 100% 2px;
+  }
+
+  /* Hero entrances: pure CSS so the fold is visible at first paint (no
+     hydration gate) and the page reads fully with JS disabled. */
+  .hero-rise {
+    animation: heroRise 0.8s ease-out both;
+  }
+  .hero-scale {
+    animation: heroScale 0.8s ease-out both;
+  }
+  .hero-fade {
+    animation: heroFade 0.9s ease-out both;
+  }
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes heroScale {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes heroFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .mask-fade-r {
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+  }
+  .mask-fade-edges {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(46, 165, 159, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(46, 165, 159, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  .text-shadow-glow {
+    text-shadow: 0 0 40px rgba(244, 162, 97, 0.25);
+  }
+}
+
+/* Hide content visually but keep it accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

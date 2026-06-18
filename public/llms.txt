@@ -1,0 +1,55 @@
+# OwlSOC
+
+> OwlSOC is an AI-powered Security Operations Center (SOC) service that
+> investigates security alerts from Microsoft Sentinel, Microsoft Defender and
+> AWS. When an alert fires, OwlSOC pulls the relevant logs, builds an
+> evidence-linked timeline, maps the attack to MITRE ATT&CK, and returns a
+> plain-language verdict with a recommended action, typically in under two
+> minutes, 24/7. A human on the customer's team approves any action before it
+> runs. In practice it automates alert triage for Microsoft Sentinel, Defender
+> and AWS: every alert is triaged and fully investigated rather than sampled.
+
+## Key facts
+
+- Connects to: Microsoft Sentinel, Microsoft Defender (Endpoint and Office), and
+  AWS Security Hub at launch; other sources (e.g. AWS GuardDuty, Entra ID) scoped
+  on request. Read-only by default; no agents to install; nothing in the traffic
+  path.
+- Speed: every alert is triaged automatically, and AI investigation typically
+  completes in under two minutes, around the clock.
+- Human-in-the-loop: OwlSOC investigates and recommends; a human approves every
+  action, and execution is gated by the write scopes the customer grants. All
+  actions are logged; reversible actions can be undone, and the few that cannot
+  be reversed are flagged before approval.
+- Output per investigation: plain-language verdict with confidence,
+  evidence-linked timeline (every claim cites the source log), MITRE ATT&CK
+  mapping, affected entities, recommended actions.
+- Pricing (per monitored environment, monthly, no minimum term):
+  Standalone £495/mo · Core £1,495/mo · Compliance £2,995/mo.
+- Pilot: £495, 30 days, fully refundable on request, one environment, typically
+  live within 48 hours of the OAuth grant.
+- Data handling: UK/EU data residency; encrypted in transit and at rest; no
+  model training on customer data (contractual commitment across all
+  sub-processors); DPA available on request.
+- Validation: each release is tested against a fixed set of real-world attack
+  scenarios (AiTM token theft, encoded PowerShell, OAuth consent abuse, mass
+  exfiltration, and others) and must return the correct verdict with a sourced
+  timeline on that set. This is a defined test set, not a guarantee about any
+  specific environment; the refundable pilot exists so buyers can verify on
+  their own alerts.
+- Company: OwlSOC Ltd, registered in the United Kingdom.
+- The demo on the website uses synthetic, clearly-labelled illustrative data,
+  never real customer data.
+
+## Pages
+
+- [Home](https://owlsoc.com/): product, how it works, interactive sample
+  investigation, pricing, FAQ, pilot sign-up
+- [Privacy policy](https://owlsoc.com/privacy/)
+- [Terms of service](https://owlsoc.com/terms/)
+
+## Contact
+
+- General: hello@owlsoc.com
+- Security disclosures: security@owlsoc.com (see /.well-known/security.txt)
+- Privacy / DPA requests: privacy@owlsoc.com
