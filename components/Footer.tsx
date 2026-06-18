@@ -47,7 +47,7 @@ export function Footer() {
 
         <div className="mt-14 pt-8 border-t border-ink-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="font-mono text-[11px] uppercase tracking-widest-sm text-bone-faint">
-            © {YEAR} OwlSOC Ltd · Registered in the UK · All rights reserved
+            © {YEAR} OwlSOC · All rights reserved
           </div>
           <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-widest-sm text-bone-faint">
             <span className="flex items-center gap-2">

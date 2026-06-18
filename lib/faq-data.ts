@@ -62,6 +62,6 @@ export const FAQS: FAQItem[] = [
   {
     anchor: 'about',
     q: 'Who is behind OwlSOC?',
-    a: "A small, founder-led team with backgrounds in offensive security, detection engineering, and Microsoft and AWS security architecture. We've been on the wrong end of a 4am Slack message ourselves, and built the product we wished we'd had. OwlSOC Ltd is registered in the UK. On the intro call you meet the people building the product, not a sales rep, and we're glad to share our backgrounds and references.",
+    a: "A small, founder-led team with backgrounds in offensive security, detection engineering, and Microsoft and AWS security architecture. We've been on the wrong end of a 4am Slack message ourselves, and built the product we wished we'd had. On the intro call you meet the people building the product, not a sales rep, and we're glad to share our backgrounds and references.",
   },
 ]

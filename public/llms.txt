@@ -37,7 +37,7 @@
   timeline on that set. This is a defined test set, not a guarantee about any
   specific environment; the refundable pilot exists so buyers can verify on
   their own alerts.
-- Company: OwlSOC Ltd, registered in the United Kingdom.
+- OwlSOC is an early-stage, founder-led team; formal company and contract details are provided before any paid pilot begins.
 - The demo on the website uses synthetic, clearly-labelled illustrative data,
   never real customer data.
 
