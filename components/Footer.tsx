@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="relative border-t border-ink-border">
       <div className="container-x py-14">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
           <div className="lg:col-span-2 max-w-md">
             <BrandLockup height={32} className="mb-6" />
             <p className="text-bone-soft text-[14.5px] leading-relaxed text-pretty">
@@ -30,6 +30,18 @@ export function Footer() {
               <FooterLink href="/#features">What you get</FooterLink>
               <FooterLink href="/#pricing">Pricing</FooterLink>
               <FooterLink href="/#faq">FAQ</FooterLink>
+            </ul>
+          </nav>
+
+          <nav aria-label="Footer learn links">
+            <h2 className="h-eyebrow mb-4">Learn</h2>
+            <ul className="space-y-2.5">
+              <FooterLink href="/ai-soc/">What is an AI SOC?</FooterLink>
+              <FooterLink href="/ai-soc-vs-mdr/">AI SOC vs MDR</FooterLink>
+              <FooterLink href="/ai-soc-vs-soc-team/">AI SOC vs a SOC team</FooterLink>
+              <FooterLink href="/microsoft-sentinel/">Microsoft Sentinel</FooterLink>
+              <FooterLink href="/microsoft-defender/">Microsoft Defender</FooterLink>
+              <FooterLink href="/aws-security-hub/">AWS Security Hub</FooterLink>
             </ul>
           </nav>
 

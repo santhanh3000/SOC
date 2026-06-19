@@ -33,8 +33,8 @@
   sub-processors); DPA available on request.
 - Validation: each release is tested against a fixed set of real-world attack
   scenarios (AiTM token theft, encoded PowerShell, OAuth consent abuse, mass
-  exfiltration, and others) and must return the correct verdict with a sourced
-  timeline on that set. This is a defined test set, not a guarantee about any
+  exfiltration, and others) and must reach the expected verdict, with the sourced
+  timeline behind it, on that set. This is a defined test set, not a guarantee about any
   specific environment; the refundable pilot exists so buyers can verify on
   their own alerts.
 - OwlSOC is an early-stage, founder-led team; formal company and contract details are provided before any paid pilot begins.
@@ -43,10 +43,22 @@
 
 ## Pages
 
-- [Home](https://owlsoc.com/): product, how it works, interactive sample
+- [Home](https://www.owlsoc.com/): product, how it works, interactive sample
   investigation, pricing, FAQ, pilot sign-up
-- [Privacy policy](https://owlsoc.com/privacy/)
-- [Terms of service](https://owlsoc.com/terms/)
+- [What is an AI SOC?](https://www.owlsoc.com/ai-soc/): definition of an AI SOC,
+  how it works, and how it differs from a traditional SOC, MDR, and automation
+- [AI SOC vs MDR](https://www.owlsoc.com/ai-soc-vs-mdr/): how an AI SOC compares
+  to managed detection and response
+- [AI SOC vs hiring a SOC team](https://www.owlsoc.com/ai-soc-vs-soc-team/):
+  build-vs-buy comparison against an in-house 24/7 SOC
+- [Microsoft Sentinel alert triage](https://www.owlsoc.com/microsoft-sentinel/):
+  automating Microsoft Sentinel alert investigation
+- [Microsoft Defender investigation](https://www.owlsoc.com/microsoft-defender/):
+  automating Microsoft Defender (Endpoint/Office) alert investigation
+- [AWS Security Hub triage](https://www.owlsoc.com/aws-security-hub/):
+  investigating AWS Security Hub findings
+- [Privacy policy](https://www.owlsoc.com/privacy/)
+- [Terms of service](https://www.owlsoc.com/terms/)
 
 ## Contact
 

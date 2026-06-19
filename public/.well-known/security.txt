@@ -4,4 +4,4 @@
 Contact: mailto:info@owlsoc.com
 Expires: 2027-06-06T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://owlsoc.com/.well-known/security.txt
+Canonical: https://www.owlsoc.com/.well-known/security.txt

@@ -1,6 +1,6 @@
 // Central site configuration. Replace the placeholders marked TODO before launch.
 
-export const SITE_URL = 'https://owlsoc.com'
+export const SITE_URL = 'https://www.owlsoc.com'
 
 // Brand assets (single source — header, footer, hero, metadata all read from
 // here). Files live in public/brand/ (vectors) and the web root (favicons,
