@@ -81,7 +81,7 @@ export const SERVICE_JSONLD = {
         unitText: 'per monitored environment per month',
       },
       description:
-        'Per monitored environment, per month. Everything in Standalone plus multi-environment support, per-environment baseline-deviation signals, recommended actions with human approval, full audit trail and undo on every reversible action, Slack/Teams workflows.',
+        'Per monitored environment, per month. Everything in Standalone plus multi-environment support, per-environment baseline-deviation signals, recommended actions with human approval, full audit trail and undo on every reversible action, and priority email support.',
       url: `${SITE_URL}/#pricing`,
     },
     {
@@ -96,7 +96,7 @@ export const SERVICE_JSONLD = {
         unitText: 'per monitored environment per month',
       },
       description:
-        'Per monitored environment, per month. Everything in Core plus audit-evidence packs to support SOC 2 / ISO 27001 / GDPR reporting, executive reporting, long-term log retention, 24/7 escalation channel.',
+        'Per monitored environment, per month. Everything in Core plus exportable case reports (incl. PDF) to support your SOC 2 / ISO 27001 / GDPR evidence, a monthly executive review compiled from your cases, and direct founder access.',
       url: `${SITE_URL}/#pricing`,
     },
   ],

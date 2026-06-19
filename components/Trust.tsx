@@ -9,7 +9,7 @@ const PROMISES = [
     title: 'You stay in control.',
     body:
       "OwlSOC recommends; humans approve. Nothing reaches your environment without a green light from someone on your team, and only when you've granted that write scope. Reversible actions undo in one click; the few that can't be reversed are flagged and need an explicit extra confirmation.",
-    proof: ['Human-in-the-loop on every action', 'One-click undo on reversible actions', 'Non-reversible actions clearly flagged', 'Full audit log, export-ready'],
+    proof: ['Human-in-the-loop on every action', 'One-click undo on reversible actions', 'Non-reversible actions clearly flagged', 'Full audit trail on every action'],
   },
   {
     title: 'Your data, handled like data.',

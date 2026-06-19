@@ -66,7 +66,7 @@ export const SEO_PAGES: Record<string, SeoPage> = {
         "h2": "How OwlSOC does it",
         "paragraphs": [
           "OwlSOC is an AI SOC that sits read-only on top of the tools you already run — Microsoft Sentinel, Microsoft Defender (Endpoint and Office), and AWS Security Hub — with no agents to install. (AWS GuardDuty and Entra ID are scoped on request, not shipped today.) It works in two tiers. Standard deterministic triage runs on every alert and returns a score. The AI investigation — calibrated confidence, a root-cause narrative, and the hedged true-positive/false-positive verdict — is the deeper step included in the paid tiers.",
-          "Each AI investigation produces an evidence-linked timeline, MITRE ATT&CK mapping, resolved entities, a plain-language verdict, and a recommended action, typically in under two minutes, 24/7. A human on your team approves any containment before it runs; execution is write-grant-gated. You can review every case in the client portal, where each claim pivots back to its source log, and produce audit-evidence packs to support your own SOC 2, ISO 27001, or GDPR reporting.",
+          "Each AI investigation produces an evidence-linked timeline, MITRE ATT&CK mapping, resolved entities, a plain-language verdict, and a recommended action, typically in under two minutes, 24/7. A human on your team approves any containment before it runs; execution is write-grant-gated. You can review every case in the client portal, where each claim pivots back to its source log, and export case reports (incl. PDF) to support your own SOC 2, ISO 27001, or GDPR reporting.",
           "It starts with a £495, 30-day fully refundable pilot, then from £495 a month per monitored environment — monthly, no minimum term, read-only by default, and live within roughly 48 hours of access."
         ]
       }
@@ -542,7 +542,7 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       {
         "h2": "What you get and how it runs",
         "paragraphs": [
-          "The output is built to be checked, not trusted blindly. Your team can open any line of the timeline and see the exact log or finding behind it, disagree with the verdict, and follow the reasoning in the client portal. OwlSOC can also produce audit-evidence packs to support your own SOC 2, ISO 27001, or GDPR reporting.",
+          "The output is built to be checked, not trusted blindly. Your team can open any line of the timeline and see the exact log or finding behind it, disagree with the verdict, and follow the reasoning in the client portal. OwlSOC can also export case reports (incl. PDF) to support your own SOC 2, ISO 27001, or GDPR reporting.",
           "Setup is light. Connection is read-only by default, there are no agents to install, and most pilots run their first investigations within about 48 hours of access. It starts with a £495, 30-day fully-refundable pilot, then from £495 per month per monitored environment, billed monthly with no minimum term."
         ]
       }
