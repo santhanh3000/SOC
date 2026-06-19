@@ -3,7 +3,7 @@ import { Instrument_Serif, Manrope, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { MotionProvider } from '@/components/MotionProvider'
 import { SITE_URL, BRAND } from '@/lib/site'
-import { ORGANIZATION_JSONLD, jsonLd } from '@/lib/schema'
+import { ORGANIZATION_JSONLD, WEBSITE_JSONLD, jsonLd } from '@/lib/schema'
 
 const display = Instrument_Serif({
   weight: ['400'],
@@ -82,6 +82,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLd(ORGANIZATION_JSONLD) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(WEBSITE_JSONLD) }}
         />
         {/* Entrance animations gate visibility on inline opacity:0; without JS,
             this restores everything so the page reads fully un-hydrated. */}

@@ -24,6 +24,20 @@ export const ORGANIZATION_JSONLD = {
     'AI Security Operations Center as a service for Microsoft Sentinel, Microsoft Defender and AWS.',
 }
 
+// WebSite node — ties the pages to the Organization and helps search/AI engines
+// resolve the site as a single entity. No SearchAction: the site has no search.
+export const WEBSITE_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  url: `${SITE_URL}/`,
+  name: 'OwlSOC',
+  description:
+    'AI Security Operations Center as a service for Microsoft Sentinel, Microsoft Defender and AWS.',
+  publisher: { '@id': ORG_ID },
+  inLanguage: 'en-GB',
+}
+
 export const SERVICE_JSONLD = {
   '@context': 'https://schema.org',
   '@type': 'Service',
