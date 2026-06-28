@@ -6,6 +6,7 @@ import { Button } from './ui/Button'
 
 const LINKS = [
   { href: '/#how', label: 'How it works' },
+  { href: '/#tour', label: 'Watch' },
   { href: '/#demo', label: 'See a sample' },
   { href: '/#features', label: 'What you get' },
   { href: '/#vs', label: 'Why OwlSOC' },

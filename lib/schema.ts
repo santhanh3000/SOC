@@ -112,6 +112,19 @@ export const FAQPAGE_JSONLD = {
   })),
 }
 
+export const VIDEO_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: 'OwlSOC product tour',
+  description:
+    'A one-minute tour recorded in the OwlSOC product: an alert is correlated into an evidence-linked timeline with a plain-language verdict and MITRE ATT&CK mapping, and a human approves the containment action.',
+  thumbnailUrl: [`${SITE_URL}/owlsoc-tour-poster.jpg`],
+  uploadDate: '2026-06-28',
+  duration: 'PT58S',
+  contentUrl: `${SITE_URL}/owlsoc-tour.mp4`,
+  publisher: { '@id': ORG_ID },
+}
+
 export function jsonLd(data: object): string {
   // < escaping prevents </script> breakout if any value ever contains it.
   return JSON.stringify(data).replace(/</g, '\\u003c')
