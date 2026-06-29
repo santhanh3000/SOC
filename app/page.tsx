@@ -34,11 +34,11 @@ export default function Home() {
       <main id="main" tabIndex={-1} className="pb-20 lg:pb-0 focus:outline-none">
         <Hero />
         <SectionDivider />
+        <VideoTour />
+        <SectionDivider />
         <Problem />
         <SectionDivider />
         <HowItWorks />
-        <SectionDivider />
-        <VideoTour />
         <SectionDivider />
         <Demo />
         <SectionDivider />

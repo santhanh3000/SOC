@@ -26,9 +26,12 @@ const mono = JetBrains_Mono({
   display: 'swap',
 })
 
-const TITLE = 'OwlSOC: your security team, working at machine speed'
+const TITLE = 'OwlSOC — AI SOC that investigates every alert in under 2 min'
 const DESCRIPTION =
-  'AI SOC as a service: OwlSOC investigates every Sentinel, Defender and AWS alert, typically in under two minutes, 24/7. Start with a £495 30-day refundable pilot.'
+  'An AI SOC that investigates every Sentinel, Defender and AWS alert in under two minutes, 24/7. You approve every action. Start a 30-day refundable pilot.'
+// Punchy social variant — shares on LinkedIn etc. are the channel. Outcome + control + pilot.
+const SOCIAL_DESCRIPTION =
+  'Every alert from your Sentinel, Defender and AWS — investigated in under two minutes, 24/7, with a human approving every action. Start a 30-day refundable pilot.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -44,8 +47,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: TITLE,
-    description:
-      'Investigates every alert, typically in under two minutes, 24/7, on top of the tools you already run. You approve every action.',
+    description: SOCIAL_DESCRIPTION,
     url: '/',
     siteName: 'OwlSOC',
     type: 'website',
@@ -62,8 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: TITLE,
-    description:
-      'Investigates every alert, typically in under two minutes, 24/7, on top of the tools you already run.',
+    description: SOCIAL_DESCRIPTION,
     images: [BRAND.ogCard],
   },
   // Favicon/apple-icon links are injected automatically from the app/

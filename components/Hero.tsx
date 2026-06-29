@@ -22,7 +22,7 @@ const sevColor: Record<string, string> = {
 
 export function Hero() {
   return (
-    <section id="top" className="relative pt-32 sm:pt-36 lg:pt-44 pb-20 lg:pb-28 overflow-hidden">
+    <section id="top" className="relative pt-28 sm:pt-32 lg:pt-36 pb-20 lg:pb-28 overflow-hidden">
       {/* Atmospheric layers */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div className="absolute inset-0 grid-bg opacity-50 mask-fade-edges" />
@@ -45,10 +45,10 @@ export function Hero() {
 
         <div className="text-center">
           {/* Owl mark */}
-          <div className="hero-scale mx-auto mb-12 inline-block" style={{ animationDelay: '0.1s' }}>
+          <div className="hero-scale mx-auto mb-8 inline-block" style={{ animationDelay: '0.1s' }}>
             <div className="relative">
               <div className="absolute inset-0 -m-10 rounded-full bg-[radial-gradient(closest-side,rgba(45,212,191,0.16),transparent)] blur-2xl" />
-              <BrandMark size={120} priority className="relative animate-pulse-eye" />
+              <BrandMark size={96} priority className="relative animate-pulse-eye" />
             </div>
           </div>
 
@@ -82,8 +82,8 @@ export function Hero() {
             <Button href="#contact" variant="primary" size="lg" arrow>
               Start your £495 pilot
             </Button>
-            <Button href="#demo" variant="secondary" size="lg">
-              See a sample investigation
+            <Button href="#tour" variant="secondary" size="lg">
+              Watch the 60-second tour
             </Button>
           </div>
 

@@ -39,20 +39,25 @@ export function FinalCTA() {
             <PilotForm />
           </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 font-mono text-[11px] uppercase tracking-widest-sm text-bone-muted">
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-x-5 sm:gap-y-2 font-mono text-[11px] uppercase tracking-widest-sm text-bone-muted">
             <span className="flex items-center gap-2">
               <span className="h-1 w-1 rounded-full bg-amber-iris" />
-              20-minute scoping call
+              You approve every action
             </span>
             <span className="hidden sm:inline text-ink-divider">·</span>
             <span className="flex items-center gap-2">
               <span className="h-1 w-1 rounded-full bg-amber-iris" />
-              Live within 48h of access
+              Read-only on your stack
             </span>
             <span className="hidden sm:inline text-ink-divider">·</span>
             <span className="flex items-center gap-2">
               <span className="h-1 w-1 rounded-full bg-amber-iris" />
               30 days. Refundable.
+            </span>
+            <span className="hidden sm:inline text-ink-divider">·</span>
+            <span className="flex items-center gap-2">
+              <span className="h-1 w-1 rounded-full bg-amber-iris" />
+              Live within 48h
             </span>
           </div>
         </motion.div>

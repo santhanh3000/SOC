@@ -38,6 +38,17 @@ export function Nav() {
     return () => document.removeEventListener('keydown', onKey)
   }, [open])
 
+  // Logo = home. On the homepage, scroll to top WITHOUT pushing a "#top" hash
+  // into the address bar — keeps the URL the clean canonical "/".
+  function goHome(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (typeof window === 'undefined' || window.location.pathname !== '/') return
+    e.preventDefault()
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })
+    if (window.location.hash) history.replaceState(null, '', '/')
+    setOpen(false)
+  }
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
@@ -52,7 +63,7 @@ export function Nav() {
               : 'border border-transparent'
           }`}
         >
-          <a href="/#top" className="flex items-center" aria-label="OwlSOC home">
+          <a href="/" onClick={goHome} className="flex items-center" aria-label="OwlSOC home">
             {/* Full lockup from sm up; standalone mark on the narrowest screens */}
             <span className="hidden sm:block">
               <BrandLockup height={30} priority />
