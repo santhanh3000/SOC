@@ -9,6 +9,8 @@
 
   html {
     scroll-behavior: smooth;
+    /* So clean-anchor scrolling lands a section below the fixed nav, not under it. */
+    scroll-padding-top: 5.5rem;
     -webkit-text-size-adjust: 100%;
   }
 
@@ -39,6 +41,13 @@
     outline: 2px solid #F4A261;
     outline-offset: 3px;
     border-radius: 2px;
+  }
+
+  /* Scroll-target sections (and <main>) are focused programmatically for a11y
+     parity with a hash jump; they're not interactive, so suppress the outline. */
+  [tabindex='-1']:focus,
+  [tabindex='-1']:focus-visible {
+    outline: none;
   }
 
   @media (prefers-reduced-motion: reduce) {

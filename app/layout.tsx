@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Instrument_Serif, Manrope, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { MotionProvider } from '@/components/MotionProvider'
+import { CleanAnchors } from '@/components/CleanAnchors'
 import { SITE_URL, BRAND } from '@/lib/site'
 import { ORGANIZATION_JSONLD, WEBSITE_JSONLD, jsonLd } from '@/lib/schema'
 
@@ -101,6 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
+        <CleanAnchors />
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
